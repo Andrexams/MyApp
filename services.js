@@ -1,7 +1,7 @@
 
 app.service('namesService',['appid', function(appid){
 
-        let names = ['Mark', 'John', 'Burns', 'Martin', 'Robert'];
+        let names = ['Mark', 'John', 'Burns', 'Martin', 'Robert', 'Jimmy'];
 
         this.getNames = function getNames(){
             return names;
