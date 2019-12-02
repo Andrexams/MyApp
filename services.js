@@ -1,7 +1,7 @@
 
 app.service('namesService',['appid', function(appid){
 
-        let names = ["Andre", "Joao", "Silvio", appid];
+        let names = ['Mark', 'John', 'Burns', 'Martin'];
 
         this.getNames = function getNames(){
             return names;
@@ -38,7 +38,7 @@ app.service('namesService',['appid', function(appid){
         this.getJobs = getJobs;
 
         function getJobs(){
-            return ['Desenv.','Arquiteto','Gerente','Diretor',appid]
+            return ['Developer','Architech','Manager','Director']
         }
     }
 
