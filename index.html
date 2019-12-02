@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AngularJS App</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script> 
+        <script src="app.js"></script>
+        <script src="services.js"></script>
+        <script src="controllers.js"></script>
+    </head>
+    <body ng-app="myApp">
+        <div ng-controller="MainNamesCtrl">
+            <h1>{{appSigla}}</h1>
+            <div ng-controller="CrudNameCtrl">
+                Nome:<input type="text" ng-model="newName"/><input type="button" value="+" ng-click="addName(newName)">
+
+                Filtrar:<input type="text" ng-model="filterName">
+                <ul>
+                    <li ng-repeat="n in names | filter : filterName" ng-click="delName(n)">{{n | uppercase}}</li>
+                </ul>
+
+                {{jobs}}
+                {{jobsAvaliable}}
+            </div>
+            
+            <br> 
+            <input type="number" ng-model="choosedNumber">{{choosedNumber}}
+
+        </div>
+        <p ng-controller="TestCtrl">{{nome}}</p> 
+    </body>
+</html>
